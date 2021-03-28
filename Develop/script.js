@@ -61,32 +61,23 @@ You are required to submit the following for review:
 
 
 var generateBtn = document.querySelector("#generate");
+
 function generatenumber() {
- //returns a random number between 0 and 10.
+  //returns a random number between 0 and 10.
   return Math.floor(Math.random() * 10);
 }
 
 
 function generatePassword() {
   //this will be the returned password.
-  var generatedPassword;
-
+  var generatedPassword = [];
   //making every letter of the alphabet a string
   var alphabetChars = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
   //make a copy of alphabet characters and change them to uppercase.
-  var uppercaseChars = alphabetChars.toUpperCase();
-  
+  var uppercaseChars = "a b c d e f g h i j k l m n o p q r s t u v w x y z".toUpperCase();
   var specialChars = "! @ # $ % ^ & * ( ) _ + : ; ? / . , < >";
-
-
-  //reassigning alphabet characters into an array by splitting with an empty space.
-  alphabetChars = alphabetChars.split(" ");
-
-  uppercaseChars = uppercaseChars.split(" ");
-
-  specialChars = specialChars.split(" ");
-
-
+  
+  
   //ask the user for length of their password. 
   var passLength = window.prompt('Password Length? (8-128 Chars)');
   //boolean ask the user whether or not to use lower case characters
@@ -95,49 +86,52 @@ function generatePassword() {
   var useUpperCase = window.confirm('Use uppercase characters?');
   //boolean ask the user whether or not to use special characters
   var useSpecialChars = window.confirm('Use special characters?');
-
- 
- //testing if the password length is a # or not
-    if (isNaN(passLength)) {
+  
+  
+  //testing if the password length is a # or not
+  if (isNaN(passLength)) {
     alert('You need to put a number between 8 and 128.');
-  //test if the password length is at least greater than 8 characters.
-  } else if (passLength > 8) {
+    //test if the password length is at least greater than 8 characters.
+  } else if (passLength < 8) {
     alert('Your Password needs to be at least 8 characters long.');
-  //test if it's less than 128 characters.
-  } else if (passLength < 128) {
+    //test if it's less than 128 characters.
+  } else if (passLength > 128) {
     alert('Your password cant be longer than 128 characters');
   } else {
-  
+
     //create an emtpy array to store the user input.
+    var stringsToConcat = "";
     var finalStringGenerator = [];
+
+    //add lowercase characters to the string generator.
+    if (useLowerCase) {
+      stringsToConcat+=alphabetChars;
+    }
+    //add uppercase characters to the string generator.
+    if (useUpperCase) {
+      stringsToConcat+=uppercaseChars;
+    }
+    //add special characters to the string generator.
+    if (useSpecialChars) {
+      stringsToConcat+=specialChars;
+    }
+
+
+    finalStringGenerator = stringsToConcat.split(" ");
+    
     //rescope password length into the 4 loop and decrement.
     for (var passLength=passLength; passLength > 0;passLength--) {
-    //add lowercase characters to the string generator.
-      if (useLowerCase) {
-        finalStringGenerator.concat(useLowerCase);
-      }
-    //add uppercase characters to the string generator.
-      if (userUpperCase) {
-        finalStringGenerator.concat(useUpperCase);
-      }
-    //add special characters to the string generator.
-      if (useSpecialChars) {
-        finalStringGenerator.concat(useSpecialChars);
-      } 
-    //if even, use number.
-      if (generateNumber() % 2 == 0) {
-        generatedPassword.push(generateNumber());
-    //if odd, use string generator.
+      //if even, use number.
+      if (generatenumber() % 2 == 0) {
+        generatedPassword.push(generatenumber());
+        //if odd, use string generator.
       } else {
-        generatedPassword.push(finalStringGenerator[0, finalStringGenerator.length]);
+        generatedPassword.push(finalStringGenerator[Math.floor(Math.random() * finalStringGenerator.length)]);
       }
-  
     }
-    return generatedPassword;
-  }
-  
-  
-
+    
+    return generatedPassword.join('');
+  }  
 }
 
 /*
