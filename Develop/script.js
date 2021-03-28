@@ -92,8 +92,13 @@ You are required to submit the following for review:
 */
 
 
-// Assignment Code
+// adding generate password function
 var generateBtn = document.querySelector("#generate");
+function generatePassword() {
+
+}
+
+
 
 // Write password to the #password input
 function writePassword() {
