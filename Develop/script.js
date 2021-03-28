@@ -95,6 +95,10 @@ You are required to submit the following for review:
 
 // adding generate password function
 var generateBtn = document.querySelector("#generate");
+function generatenumber() {
+ //returns a random number between 0 and 10.
+  return Math.floor(Math.random() * 10);
+}
 function generatePassword() {
   //making every letter of the alphabet a string
   var alphabetChars = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
@@ -102,7 +106,8 @@ function generatePassword() {
   var uppercaseChars = alphabetChars.toUpperCase();
   
   var specialChars = "! @ # $ % ^ & * ( ) _ + : ; ? / . , < >"
-  
+
+
   //reassigning alphabet characters into an array by splitting with an empty space.
   alphabetChars = alphabetChars.split(" ");
 
@@ -113,7 +118,9 @@ function generatePassword() {
   console.log(alphabetChars);
 }
 
-
+/*
+THEN I choose a length of at least 8 characters and no more than 128 characters
+*/ 
 
 
 
