@@ -34,43 +34,6 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
-
-## Mock-Up
-
-The following image shows the web application's appearance and functionality:
-
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
-
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
 * Repository has a unique name.
 
 * Repository follows best practices for file structure and naming conventions.
@@ -94,18 +57,26 @@ You are required to submit the following for review:
 
 
 // adding generate password function
+
+
+
 var generateBtn = document.querySelector("#generate");
 function generatenumber() {
  //returns a random number between 0 and 10.
   return Math.floor(Math.random() * 10);
 }
+
+
 function generatePassword() {
+  //this will be the returned password.
+  var generatedPassword;
+
   //making every letter of the alphabet a string
   var alphabetChars = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
   //make a copy of alphabet characters and change them to uppercase.
   var uppercaseChars = alphabetChars.toUpperCase();
   
-  var specialChars = "! @ # $ % ^ & * ( ) _ + : ; ? / . , < >"
+  var specialChars = "! @ # $ % ^ & * ( ) _ + : ; ? / . , < >";
 
 
   //reassigning alphabet characters into an array by splitting with an empty space.
@@ -125,27 +96,46 @@ function generatePassword() {
   //boolean ask the user whether or not to use special characters
   var useSpecialChars = window.confirm('Use special characters?');
 
-if (isNaN(passLength)) {
-  alert('You need to put a number between 8 and 128.');
-} else if (passLength > 8) {
-  alert('Your Password needs to be at least 8 characters long.');
-} else if (passLength < 128) {
-  alert('Your password cant be longer than 128 characters');
-} else {
-
-  if (useLowerCase) {
-
+ 
+ //testing if the password length is a # or not
+    if (isNaN(passLength)) {
+    alert('You need to put a number between 8 and 128.');
+  //test if the password length is at least greater than 8 characters.
+  } else if (passLength > 8) {
+    alert('Your Password needs to be at least 8 characters long.');
+  //test if it's less than 128 characters.
+  } else if (passLength < 128) {
+    alert('Your password cant be longer than 128 characters');
+  } else {
+  
+    //create an emtpy array to store the user input.
+    var finalStringGenerator = [];
+    //rescope password length into the 4 loop and decrement.
+    for (var passLength=passLength; passLength > 0;passLength--) {
+    //add lowercase characters to the string generator.
+      if (useLowerCase) {
+        finalStringGenerator.concat(useLowerCase);
+      }
+    //add uppercase characters to the string generator.
+      if (userUpperCase) {
+        finalStringGenerator.concat(useUpperCase);
+      }
+    //add special characters to the string generator.
+      if (useSpecialChars) {
+        finalStringGenerator.concat(useSpecialChars);
+      } 
+    //if even, use number.
+      if (generateNumber() % 2 == 0) {
+        generatedPassword.push(generateNumber());
+    //if odd, use string generator.
+      } else {
+        generatedPassword.push(finalStringGenerator[0, finalStringGenerator.length]);
+      }
+  
+    }
+    return generatedPassword;
   }
-
-  if (useUpperCase) {
-
-  }
-  if (useSpecialChars) {
-
-  }
-
-}
-
+  
   
 
 }
@@ -153,7 +143,6 @@ if (isNaN(passLength)) {
 /*
 THEN I choose a length of at least 8 characters and no more than 128 characters
 */ 
-
 
 
 
