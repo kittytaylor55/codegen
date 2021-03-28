@@ -115,7 +115,39 @@ function generatePassword() {
 
   specialChars = specialChars.split(" ");
 
-  console.log(alphabetChars);
+
+  //ask the user for length of their password. 
+  var passLength = window.prompt('Password Length? (8-128 Chars)');
+  //boolean ask the user whether or not to use lower case characters
+  var useLowerCase = window.confirm('Use lowercase characters?');
+  //boolean ask the user whether or not to use  uppercase characters
+  var useUpperCase = window.confirm('Use uppercase characters?');
+  //boolean ask the user whether or not to use special characters
+  var useSpecialChars = window.confirm('Use special characters?');
+
+if (isNaN(passLength)) {
+  alert('You need to put a number between 8 and 128.');
+} else if (passLength > 8) {
+  alert('Your Password needs to be at least 8 characters long.');
+} else if (passLength < 128) {
+  alert('Your password cant be longer than 128 characters');
+} else {
+
+  if (useLowerCase) {
+
+  }
+
+  if (useUpperCase) {
+
+  }
+  if (useSpecialChars) {
+
+  }
+
+}
+
+  
+
 }
 
 /*
