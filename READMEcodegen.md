@@ -2,11 +2,30 @@
 
 # Code Generator
 Crystal Taylor's code gen read me.
-
+link to github site: https://kittytaylor55.github.io/codegen/Develop/
+link to githunb repo: https://github.com/kittytaylor55/codegen
+ (files in Develop folder)
 
 
 <img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen1.png" alt="screen shot of code generator"/>
 
+<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen2.png" alt="screen shot of code generator"/>
+
+<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen3.png" alt="screen shot of code generator"/>
+
+<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen4.png" alt="screen shot of code generator"/>
+
+<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen5.png" alt="screen shot of code generator"/>
+
+<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen6.png" alt="screen shot of code generator"/>
+
+<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen7.png" alt="screen shot of code generator"/>
+
+<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen8.png" alt="screen shot of code generator"/>
+
+<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen9.png" alt="screen shot of code generator"/>
+
+<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen10.png" alt="screen shot of code generator"/>
 
 
 
