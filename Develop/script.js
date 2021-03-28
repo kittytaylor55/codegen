@@ -92,11 +92,31 @@ You are required to submit the following for review:
 */
 
 
+
 // adding generate password function
 var generateBtn = document.querySelector("#generate");
 function generatePassword() {
+  //making every letter of the alphabet a string
+  var alphabetChars = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
+  //make a copy of alphabet characters and change them to uppercase.
+  var uppercaseChars = alphabetChars.toUpperCase();
+  
+  var specialChars = "! @ # $ % ^ & * ( ) _ + : ; ? / . , < >"
+  
+  //reassigning alphabet characters into an array by splitting with an empty space.
+  alphabetChars = alphabetChars.split(" ");
 
+  uppercaseChars = uppercaseChars.split(" ");
+
+  specialChars = specialChars.split(" ");
+
+  console.log(alphabetChars);
 }
+
+
+
+
+
 
 
 
