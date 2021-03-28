@@ -6,8 +6,9 @@ link to github site: https://kittytaylor55.github.io/codegen/Develop/
 link to githunb repo: https://github.com/kittytaylor55/codegen
  (files in Develop folder)
 
-
+--------*Defining variables*------
 <img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen1.png" alt="screen shot of code generator"/>
+<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen7.png" alt="screen shot of code generator"/>
 
 <img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen2.png" alt="screen shot of code generator"/>
 
@@ -17,15 +18,23 @@ link to githunb repo: https://github.com/kittytaylor55/codegen
 
 <img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen5.png" alt="screen shot of code generator"/>
 
-<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen6.png" alt="screen shot of code generator"/>
 
-<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen7.png" alt="screen shot of code generator"/>
 
+--------*Adding else if statements, so that the code will pop out the right error message if condtitions are not met*------
 <img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen8.png" alt="screen shot of code generator"/>
 
+--------*Making a loop and connecting a string so the code will run correctly*------
 <img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen9.png" alt="screen shot of code generator"/>
 
+
+
+
+--------*Getting a code from input*------
+<img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen6.png" alt="screen shot of code generator"/>
 <img src="https://kittytaylor55.github.io/codegen/Assets/images/codegen10.png" alt="screen shot of code generator"/>
+
+
+
 
 
 
